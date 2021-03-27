@@ -26,8 +26,8 @@ export default props => (
             </View>
 
             <View style={styles.containerButton}>
-                <Buttons class='Login' text='Login' color='#8E3385' width={130} colorText='#FFFFFF'/>
-                <Buttons text='Cadastre-se' color='#FFFFFF' width={185} colorText='#5A5656'/>     
+                <Buttons class='Login' text='Login' color='#8E3385' width={130} height={57} colorText='#FFFFFF'/>
+                <Buttons text='Cadastre-se' color='#FFFFFF' width={185} height={57} colorText='#5A5656'/>     
             </View>
              
         </ImageBackground>
