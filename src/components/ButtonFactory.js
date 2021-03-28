@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TouchableOpacity} from 'react-native'
 
 const buttons = props => {
     const content = (
-        <View style={[styles.button, { backgroundColor: props.color, width: props.width, height: props.height }]}>
+        <View style={[styles.button, {backgroundColor: props.color, width: props.width, height: props.height, borderRadius: props.borderRadius, padding: props.padding}]}>
             <Text style={{color: props.colorText, fontFamily: props.fontFamily, fontSize: props.fontSize}}>{props.text}</Text>
         </View>
     )
@@ -12,10 +12,8 @@ const buttons = props => {
 
 const styles = StyleSheet.create({
     button: {
-        padding: 9,
-        borderRadius: 30,
-        alignItems: 'center'
-    },
+        alignItems: 'center',
+    }
 })
 
 export default buttons
