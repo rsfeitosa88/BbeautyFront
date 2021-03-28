@@ -6,6 +6,7 @@ const Stack = createStackNavigator()
 
 export default props =>(
     <Stack.Navigator initialRouteName="Start">
-        <Stack.Screen name="Start" component={Start} />
+        <Stack.Screen name="Start" 
+            options={{headerShown: false}}  component={Start} />
     </Stack.Navigator>
 )
