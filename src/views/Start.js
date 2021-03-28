@@ -5,7 +5,7 @@ import { View,
     ImageBackground, 
     Alert} from 'react-native'
 
-import Buttons from '../assets/styles/buttons'
+import Button from '../components/ButtonFactory'
 
 const image = '../assets/images/esmaltes.jpg'
 
@@ -27,11 +27,11 @@ export default props => (
             </View>
 
             <View style={styles.containerButton}>
-                <Buttons text='Login' color='#8E3385' width={130} height={57} colorText='#FFFFFF'
-                onPress={()=> Alert.alert("testing")}/>
+                <Button text='Login' color='#8E3385' width={130} height={57} colorText='#FFFFFF' 
+                fontFamily='Poppins-Medium' fontSize={25} onPress={()=> Alert.alert("testing")}/>
                 
-                <Buttons text='Cadastre-se' color='#FFFFFF' width={185} height={57} colorText='#5A5656'
-                onPress={()=> Alert.alert("testing")}/>     
+                <Button text='Cadastre-se' color='#FFFFFF' width={185} height={57} colorText='#5A5656'
+                fontFamily='Poppins-Medium' fontSize={25} onPress={()=> Alert.alert("testing")}/>     
             </View>
              
         </ImageBackground>
