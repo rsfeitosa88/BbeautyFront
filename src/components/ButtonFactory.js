@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, TouchableOpacity} from 'react-native'
 const buttons = props => {
     const content = (
         <View style={[styles.button, { backgroundColor: props.color, width: props.width, height: props.height }]}>
-            <Text style={[styles.text, {color: props.colorText}]}>{props.text}</Text>
+            <Text style={{color: props.colorText, fontFamily: props.fontFamily, fontSize: props.fontSize}}>{props.text}</Text>
         </View>
     )
     return <TouchableOpacity onPress={props.onPress}>{content}</TouchableOpacity>
@@ -16,10 +16,6 @@ const styles = StyleSheet.create({
         borderRadius: 30,
         alignItems: 'center'
     },
-    text: {
-        fontFamily: 'Poppins-Medium',
-        fontSize: 25
-    }
 })
 
 export default buttons
