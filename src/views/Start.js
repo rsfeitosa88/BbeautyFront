@@ -28,10 +28,10 @@ export default props => (
 
             <View style={styles.containerButton}>
                 <Button text='Login' color='#8E3385' width={130} height={57} colorText='#FFFFFF' 
-                fontFamily='Poppins-Medium' fontSize={25} onPress={()=> Alert.alert("testing")}/>
+                fontFamily='Poppins-Medium' fontSize={25} padding={9} borderRadius={30} onPress={()=> Alert.alert("testing")}/>
                 
                 <Button text='Cadastre-se' color='#FFFFFF' width={185} height={57} colorText='#5A5656'
-                fontFamily='Poppins-Medium' fontSize={25} onPress={()=> Alert.alert("testing")}/>     
+                fontFamily='Poppins-Medium' fontSize={25} padding={9} borderRadius={30} onPress={()=> Alert.alert("testing")}/>     
             </View>
              
         </ImageBackground>
