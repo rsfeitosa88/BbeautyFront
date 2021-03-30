@@ -15,13 +15,12 @@ export default props => (
         <ImageBackground source={require(image)} style={styles.image} blurRadius={50}>
             
             <View style={styles.containerHead}>
-                
                 <Text style={styles.headTextBold}>Seja bem-vinde</Text>
                 <Text style={styles.headTextNormal}>de volta!</Text>
                 <Text style={styles.signText}>Você não tem conta?</Text>
                 <Button text='Cadastre-se' color='#8E3385' width={125} height={26} colorText='#FFFFFF'
-                fontFamily='Poppins-Bold' fontSize={18} padding={0} borderRadius={0} onPress={()=> Alert.alert("testing")}></Button>
-        
+                fontFamily='Poppins-Bold' fontSize={18} padding={0} borderRadius={0} 
+                onPress={()=> Alert.alert("testing")} />
             </View>
 
         </ImageBackground>
