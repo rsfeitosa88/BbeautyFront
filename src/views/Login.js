@@ -6,6 +6,7 @@ import { View,
     Alert} from 'react-native'
 
 import Button from '../components/ButtonFactory'
+import TextInput from '../components/TextInputFactory'
 
 const image = '../assets/images/esmaltes.jpg'
 
@@ -21,6 +22,9 @@ export default props => (
                 <Button text='Cadastre-se' color='#8E3385' width={125} height={26} colorText='#FFFFFF'
                 fontFamily='Poppins-Bold' fontSize={18} padding={0} borderRadius={0} 
                 onPress={()=> Alert.alert("testing")} />
+            </View>
+            <View style={styles.loginContainer}>
+                <TextInput fieldName='E-mail'/>
             </View>
 
         </ImageBackground>
@@ -40,7 +44,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     containerHead: {
-        flex: 1,
+        flex: 2,
         width: 323,
         height: 149,
         left: 25,
@@ -62,4 +66,10 @@ const styles = StyleSheet.create({
         fontSize: 17,
         color: '#FFFFFF'
     },
+    loginContainer: {
+        flex: 3,
+        left: 25,
+        width: 400,
+        height: 177
+    }
 })
