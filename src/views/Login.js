@@ -30,17 +30,19 @@ export default props => (
                     <Button text='Esqueceu a senha?' color='transparent' width={180} height={26} colorText='#FFFFFF'
                         fontFamily='Poppins-Bold' fontSize={17} padding={0} borderRadius={0} alignSelf='flex-end'
                         onPress={()=> Alert.alert("testing")} />
-                    <Text style={styles.signText}>Você não tem conta? </Text>
-                    <Button text='Cadastre-se' color='#8E3385' width={125} height={26} colorText='#FFFFFF'
-                        fontFamily='Poppins-Bold' fontSize={18} padding={0} borderRadius={6} alignSelf='center'
+                    <Text style={styles.signText}>Não tem conta? </Text>
+                    <Button text='Cadastre-se' color='#8E3385' width={125} height={27} colorText='#FFFFFF'
+                        fontFamily='Poppins-Bold' fontSize={17} padding={0} borderRadius={6} alignSelf='center'
                         onPress={()=> Alert.alert("testing")} />
                 </View>
+                
                 <View style={styles.buttonContainer}>
                     <Button text='Entrar' color='#8E3385' width={126} height={48} colorText='#FFFFFF'
                     fontFamily='Poppins-Regular' fontSize={24} padding={6} borderRadius={30} alignSelf='center'
                     onPress={()=> Alert.alert("testing")} />
                 </View>
             </View>
+            
             <View style={styles.bottomContainer}>
                     <Button text='Voltar' color='#FFFFFF' width={106} height={42} colorText='#8E3385'
                     fontFamily='Poppins-Bold' fontSize={18} padding={7} borderRadius={30} alignSelf='center'
@@ -110,8 +112,12 @@ const styles = StyleSheet.create({
     },
     signText: {
         fontFamily: 'Poppins-Regular',
+        flexDirection: 'row',
+        textAlign: 'right',
         fontSize: 17,
-        color: '#FFFFFF'
+        color: '#FFFFFF',
+        width: 200,
+        height: 200
     },
     bottomContainer: {
         flex: 0.5,
