@@ -1,10 +1,11 @@
-import React from 'react';
-import { View, Text, StyleSheet, ImageBackground, Alert, KeyboardAvoidingView } from 'react-native';
+import React from 'react'
+import { View, Text, ImageBackground, Alert, KeyboardAvoidingView } from 'react-native'
 
-import Button from '../components/ButtonFactory';
-import TextInput from '../components/TextInputFactory';
+import styles from '../assets/styles/loginStyle'
+import Button from '../components/ButtonFactory'
+import TextInput from '../components/TextInputFactory'
 
-const image = '../assets/images/esmaltes.jpg';
+const image = '../assets/images/esmaltes.jpg'
 
 export default props => (
 
@@ -17,18 +18,17 @@ export default props => (
       <ImageBackground
         source={require(image)}
         style={styles.image}
-        blurRadius={50}>
+        blurRadius={50}
+      >
         <View style={styles.containerHead}>
           <Text style={styles.headTextBold}>Seja bem-vinde</Text>
           <Text style={styles.headTextNormal}>de volta!</Text>
         </View>
-
         <View style={styles.bodyContainer}>
           <View style={styles.fieldContainer}>
             <TextInput fieldName="E-mail" placeHolder="Digite seu e-mail" />
             <TextInput fieldName="Senha" placeHolder="Digite sua senha" />
           </View>
-
           <View style={styles.linksContainer}>
             <Button
               text="Esqueceu a senha?"
@@ -74,7 +74,6 @@ export default props => (
             />
           </View>
         </View>
-
         <View style={styles.bottomContainer}>
           <Button
             text="Voltar"
@@ -95,71 +94,3 @@ export default props => (
   </View>
 
 );
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'column',
-  },
-  image: {
-    display: 'flex',
-    width: '100%',
-    height: '100%',
-    justifyContent: 'center',
-  },
-  containerHead: {
-    flex: 1,
-    marginBottom: 10,
-    width: 323,
-    height: 149,
-    marginLeft: 25,
-    marginRight: 25,
-    top: 68,
-  },
-  headTextBold: {
-    fontFamily: 'Poppins-Bold',
-    fontSize: 30,
-    color: '#FFFFFF',
-  },
-  headTextNormal: {
-    top: -5,
-    fontFamily: 'Poppins-Regular',
-    fontSize: 30,
-    color: '#FFFFFF',
-  },
-  bodyContainer: {
-    flex: 2,
-    marginLeft: 25,
-    marginRight: 25,
-    flexDirection: 'column',
-  },
-  fieldContainer: {
-    flex: 1.2,
-    flexDirection: 'column',
-    alignSelf: 'auto'
-  },
-  linksContainer: {
-    flex: 1,
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'flex-end',
-  },
-  buttonContainer: {
-    flex: 1,
-    justifyContent: 'flex-start',
-    alignSelf: 'center',
-  },
-  signText: {
-    fontFamily: 'Poppins-Regular',
-    flexDirection: 'row',
-    textAlign: 'right',
-    fontSize: 17,
-    color: '#FFFFFF',
-    width: 200,
-    height: 200,
-  },
-  bottomContainer: {
-    flex: 0.5,
-    marginLeft: 25
-  },
-});

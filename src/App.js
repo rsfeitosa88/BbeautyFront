@@ -4,7 +4,9 @@ import Start from './views/Start'
 
 
 export default props => (
-    <SafeAreaView style={{flex: 1}}>
-        <Start/>
-    </SafeAreaView>
+    
+  <SafeAreaView style={{flex: 1}}>
+    <Start/>
+  </SafeAreaView>
+
 )
