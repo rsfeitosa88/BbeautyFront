@@ -131,12 +131,12 @@ const styles = StyleSheet.create({
     flex: 2,
     marginLeft: 25,
     marginRight: 25,
-    width: 345,
-    height: 341,
     flexDirection: 'column',
   },
   fieldContainer: {
-    flex: 1.3,
+    flex: 1.2,
+    flexDirection: 'column',
+    alignSelf: 'auto'
   },
   linksContainer: {
     flex: 1,
@@ -160,7 +160,6 @@ const styles = StyleSheet.create({
   },
   bottomContainer: {
     flex: 0.5,
-    marginLeft: 25,
-    marginRight: 25,
+    marginLeft: 25
   },
 });
