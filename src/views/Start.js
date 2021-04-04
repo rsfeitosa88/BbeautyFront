@@ -6,7 +6,9 @@ import Button from '../components/ButtonFactory'
 
 const image = '../assets/images/esmaltes.jpg'
 
-export default props => (
+export default props => {
+
+  return(
   
   <View style={styles.container}>
     <ImageBackground 
@@ -50,5 +52,5 @@ export default props => (
       </View>
     </ImageBackground> 
   </View>
-
-)
+  )
+}
