@@ -2,18 +2,18 @@ import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import Start from '../views/Start'
 import Login from '../views/Login'
-import PreLoading from '../views/PreLoading'
+import PreLoad from '../views/PreLoad'
 import SignUp from '../views/SignUp'
 
 const Stack = createStackNavigator()
 
-export default props => (
+export default () => (
   
-  <Stack.Navigator initialRouteName="Login">
+  <Stack.Navigator initialRouteName="PreLoad">
     <Stack.Screen
-      name="PreLoading"
+      name="PreLoad"
       options={{ headerShown: false }}
-      component={PreLoading}
+      component={PreLoad}
     />
     <Stack.Screen
       name="Start"
@@ -24,6 +24,11 @@ export default props => (
       name="Login"
       options={{ headerShown: false }}
       component={Login}
+    />
+    <Stack.Screen
+      name="SignUp"
+      options={{ headerShown: false }}
+      component={SignUp}
     />
     
   </Stack.Navigator>
