@@ -28,7 +28,10 @@ const styles = StyleSheet.create({
     fontSize: 60,
     lineHeight: 90,
     color: '#8E3385',
-    textAlign: 'center'
+    textAlign: 'center',
+    textShadowColor: 'rgba(0, 0, 0, 0.25)',
+    textShadowOffset: {width: -1, height: 1},
+    textShadowRadius: 10
     },
   containerText: {
     flex: 1,
