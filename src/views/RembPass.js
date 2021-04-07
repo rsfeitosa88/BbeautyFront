@@ -48,8 +48,7 @@ export default props =>{
             <View style={styles.bodyContainer}>
               
               <UselessTextInput 
-                inlineImageLeft='message'
-                inlineImagePadding={1}
+                
                 text='Digite seu e-mail de cadastro'
                 style={temp.textField}
                 fieldName='Esqueci a senha'
