@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 
-const styles = StyleSheet.create({
+export default loginStyle = StyleSheet.create({
   container: {
       flex: 1,
       flexDirection: 'column'
@@ -42,6 +42,20 @@ const styles = StyleSheet.create({
       flexDirection: 'column',
       alignSelf: 'auto'
     },
+    fieldName: {
+      fontFamily: 'Poppins-Regular',
+      fontSize: 17,
+      color: '#FFFFFF'
+    },
+    textInput: {
+      fontFamily: 'Poppins-Regular',
+      marginBottom: 5,
+      borderBottomWidth: 1, 
+      lineHeight: 0.5, 
+      borderColor: 'rgba(255, 255, 255, 0.69)', 
+      textDecorationColor: '#FFFFFF',
+      fontSize: 14
+    },
     linksContainer: {
       flex: 1,
       flexDirection: 'row',
@@ -65,7 +79,6 @@ const styles = StyleSheet.create({
     bottomContainer: {
       flex: 0.5,
       marginLeft: 25
-    }
-});
+    },
 
-export default styles
+});
