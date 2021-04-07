@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, ImageBackground, Alert} from 'react-native'
+import { View, Text, ImageBackground, Alert } from 'react-native'
 
 import styles from '../assets/styles/startStyle'
 import Button from '../components/ButtonFactory'
@@ -34,7 +34,7 @@ export default props => {
           padding={9}
           borderRadius={30}
           alignSelf='center'
-          onPress={()=> Alert.alert("testing")}
+          onPress={()=> props.navigation.navigate('Login')}
         />
         <Button
           text='Cadastre-se'
