@@ -10,6 +10,8 @@ const buttons = props => {
         height: props.height,
         borderRadius: props.borderRadius,
         padding: props.padding,
+        marginTop: props.marginTop,
+        justifyContent: props.justifyContent
       }}>
       <Text
         style={{

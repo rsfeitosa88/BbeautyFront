@@ -75,7 +75,7 @@ export default props => {
                   padding={0}
                   borderRadius={0}
                   alignSelf="flex-end"
-                  onPress={() => Alert.alert('testing')}
+                  onPress={() => props.navigation.navigate('RembPass')}
                 />
                 <Text style={loginStyle.signText}>Não tem conta? </Text>
                 <Button

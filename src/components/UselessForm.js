@@ -7,6 +7,8 @@ const UselessTextInput = (props) => {
     <View>
       <Text style={styles.fieldName}>{props.text}</Text>
       <TextInput 
+        inlineImageLeft={props.inlineImageLeft}
+        inlineImagePadding={props.inlineImagePadding}
         style={styles.field}
         placeholder={props.placeholder}
         maxLength={30}

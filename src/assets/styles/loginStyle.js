@@ -35,7 +35,8 @@ export default loginStyle = StyleSheet.create({
       flex: 2,
       marginLeft: 25,
       marginRight: 25,
-      flexDirection: 'column'
+      flexDirection: 'column',
+      justifyContent: 'space-around'
     },
     fieldContainer: {
       flex: 1.2,
@@ -78,7 +79,8 @@ export default loginStyle = StyleSheet.create({
     },
     bottomContainer: {
       flex: 0.5,
-      marginLeft: 25
+      marginLeft: 25,
+      marginRight: 25
     },
 
 });
