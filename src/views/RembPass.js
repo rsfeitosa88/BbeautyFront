@@ -10,6 +10,7 @@ import {
 
 import styles from '../assets/styles/rembPassStyle'
 import UselessTextInput from '../components/UselessForm'
+import Button from '../components/ButtonFactory'
 
 export default props =>{
     
@@ -31,14 +32,12 @@ export default props =>{
             >
             <View style={styles.containerHead}>
               <Text 
-                  style={[
-                    styles.headTextBold, 
+                  style={[ 
                     styles.textBold, 
                     styles.headFirstText]}>Esqueceu a senha?</Text>
               <Text 
                 style={[
-                  styles.headTextNormal, 
-                  styles.textNormal, 
+                  styles.headTextNormal,
                   styles.headFirstText]}>Tudo bem!</Text>
               <Text 
               style={[
@@ -46,22 +45,54 @@ export default props =>{
                   styles.headSecondText]}>Eviaremos um e-mail com um link para efetuar a troca</Text>
             </View>
             <View style={styles.bodyContainer}>
-              
-              <UselessTextInput 
-                
-                text='Digite seu e-mail de cadastro'
-                style={temp.textField}
-                fieldName='Esqueci a senha'
-                maxLenght={3}
-                onChangeText={email => setEmail(email)}
-                value={email}
-              />
+              <View style={styles.textInputContainer}> 
+                <UselessTextInput 
+                  text='Digite seu e-mail de cadastro'
+                  fieldName='Esqueci a senha'
+                  inlineImageLeft='message'
+                  inlineImagePadding={50}
+                  style={temp.textField}
+                  maxLenght={28}
+                  value={email}
+                  onChangeText={email => setEmail(email)}
+                />
+                </View>
+              <View style= {styles.buttonEnviar}>
+                <Button 
+                  text='Enviar'
+                  color='#FFFFFF'
+                  width={106}
+                  height={42}
+                  colorText='#8E3385'
+                  fontFamily='Poppins-Bold'
+                  fontSize={18}
+                  padding={7}
+                  borderRadius={30}
+                  alignSelf='center'
+                  onPress={() => null}
+                />
+              </View>
             </View>
-                
-          </ImageBackground>
-        </TouchableWithoutFeedback>
-      </KeyboardAvoidingView>
-    </View>
+          <View style={styles.bottomContainer}>
+            <Text style={styles.textBottom}>Lembrou da Senha? Toque em Login</Text>
+              <Button 
+                text='Login'
+                color='#8E3385'
+                width={126}
+                height={48}
+                colorText='#FFFFFF'
+                fontFamily='Poppins-Regular'
+                fontSize={24}
+                padding={6}
+                borderRadius={30}
+                alignSelf='center'
+                onPress={() => props.navigation.navigate('Login')}
+              />
+          </View> 
+        </ImageBackground>
+       </TouchableWithoutFeedback>
+     </KeyboardAvoidingView>
+   </View>
   )
 }
 
