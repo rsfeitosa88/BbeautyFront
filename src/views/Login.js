@@ -97,7 +97,7 @@ export default props => {
                   padding={0}
                   borderRadius={6}
                   alignSelf='center'
-                  onPress={() => Alert.alert('testing')}
+                  onPress={() => Alert.alert('SignUp')}
                 />
               </View>
               <View style={loginStyle.buttonContainer}>
@@ -115,11 +115,6 @@ export default props => {
                   onPress={() => Alert.alert('testing')}
                 />
               </View>
-            </View>
-            <View style={loginStyle.bottomContainer}>
-              
-              
-              
             </View>
           </ImageBackground>
         </TouchableWithoutFeedback>
