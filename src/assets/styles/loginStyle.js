@@ -82,5 +82,9 @@ export default loginStyle = StyleSheet.create({
       marginLeft: 25,
       marginRight: 25
     },
+    textField: {
+      fontFamily: 'Poppins-Regular',
+      fontSize: 17
+    }
 
 });

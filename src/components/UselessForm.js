@@ -1,23 +1,25 @@
 import React from 'react'
 import { View, TextInput, Text, StyleSheet } from 'react-native'
 
-const UselessTextInput = (props) => {
-  
-  return (
-    <View>
-      <Text style={styles.fieldName}>{props.text}</Text>
+export default UselessTextInput = React.forwardRef((props, ref) => (
+  <View>
+    <Text style={styles.fieldName}>{props.text}</Text>
       <TextInput 
+        ref={ref}
         inlineImageLeft={props.inlineImageLeft}
         inlineImagePadding={props.inlineImagePadding}
         style={styles.field}
         placeholder={props.placeholder}
-        maxLength={30}
-        fontFamily='Poppins-Regular'
-        fontSize={17}
-        />
-    </View>    
-    )
-}
+        maxLength={props.maxLength}
+        fontFamily={props.fontFamily}
+        fontSize={props.fontSize}
+        returnKeyType={props.returnKeyType}
+        secureTextEntry={props.secureTextEntry}
+        onSubmitEditing={props.onSubmitEditing}
+      />
+  </View>    
+  )
+)
 
 const styles = StyleSheet.create({
   fieldName: {
@@ -31,6 +33,4 @@ const styles = StyleSheet.create({
     lineHeight: 0.5
   }
 })
-
-export default UselessTextInput
 
