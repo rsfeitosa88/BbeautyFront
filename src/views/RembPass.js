@@ -20,9 +20,9 @@ export default props =>{
   return (
     <View style={styles.container}>
       <KeyboardAvoidingView 
-        behavior={Platform.OS == "ios" ? "padding" : "height"}
-        keyboardVerticalOffset={Platform.OS == "ios" ? 0 : 20}
-        enabled={Platform.OS === "ios" ? true : false}
+        behavior={Platform.OS == 'ios' ? 'padding' : 'height'}
+        keyboardVerticalOffset={Platform.OS == 'ios' ? 0 : 20}
+        enabled={Platform.OS === 'ios' ? true : false}
         >
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <ImageBackground 
