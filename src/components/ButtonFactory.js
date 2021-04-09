@@ -1,7 +1,7 @@
 import React from 'react'
 import {Text, View, TouchableOpacity} from 'react-native'
 
-const buttons = props => {
+export default buttons = props => {
   const content = (
     <View
       style={{
@@ -26,5 +26,3 @@ const buttons = props => {
   )
   return <TouchableOpacity onPress={props.onPress}>{content}</TouchableOpacity>
 }
-
-export default buttons
