@@ -10,7 +10,7 @@ const Stack = createStackNavigator()
 
 export default () => (
   
-  <Stack.Navigator initialRouteName='RembPass'>
+  <Stack.Navigator initialRouteName='Login'>
     <Stack.Screen
       name='PreLoad'
       options={{headerShown: false}}
