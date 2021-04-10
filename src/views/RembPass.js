@@ -12,7 +12,7 @@ import styles from '../assets/styles/rembPassStyle'
 import UselessTextInput from '../components/UselessForm'
 import Button from '../components/ButtonFactory'
 
-export default props =>{
+export default RembPass = props =>{
     
   const image = '../assets/images/esmaltes.jpg'
   const [email, setEmail] = React.useState()

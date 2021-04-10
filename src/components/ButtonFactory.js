@@ -11,7 +11,8 @@ export default buttons = props => {
         borderRadius: props.borderRadius,
         padding: props.padding,
         marginTop: props.marginTop,
-        justifyContent: props.justifyContent
+        justifyContent: props.justifyContent,
+        AlignItems: props.center
       }}>
       <Text
         style={{
@@ -19,6 +20,7 @@ export default buttons = props => {
           fontFamily: props.fontFamily,
           fontSize: props.fontSize,
           alignSelf: props.alignSelf,
+          
         }}>
         {props.text}
       </Text>

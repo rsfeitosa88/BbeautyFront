@@ -47,7 +47,7 @@ export default props => {
           padding={9}
           borderRadius={30}
           alignSelf='center' 
-          onPress={()=> Alert.alert("testing")}
+          onPress={()=> props.navigation.navigate('SignUp')}
         />
       </View>
     </ImageBackground> 

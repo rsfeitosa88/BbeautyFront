@@ -16,6 +16,7 @@ export default UselessTextInput = React.forwardRef((props, ref) => (
         returnKeyType={props.returnKeyType}
         secureTextEntry={props.secureTextEntry}
         onSubmitEditing={props.onSubmitEditing}
+        width={props.width}
       />
   </View>    
   )

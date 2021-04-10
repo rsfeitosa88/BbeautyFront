@@ -58,7 +58,7 @@ export default loginStyle = StyleSheet.create({
       fontSize: 14
     },
     linksContainer: {
-      flex: 1,
+      flex: 1.6,
       flexDirection: 'row',
       flexWrap: 'wrap',
       justifyContent: 'flex-end'
