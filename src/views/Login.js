@@ -2,8 +2,7 @@ import React from 'react'
 import { 
   View, 
   Text, 
-  ImageBackground, 
-  Alert, 
+  ImageBackground,  
   KeyboardAvoidingView, 
   Keyboard, 
   TouchableWithoutFeedback
@@ -13,7 +12,7 @@ import loginStyle from '../assets/styles/loginStyle'
 import Button from '../components/ButtonFactory'
 import UselessForm from '../components/UselessForm'
 
-export default props => {
+export default Login = props => {
   
   const image = '../assets/images/esmaltes.jpg'
   const [email, setEmail] = React.useState()
@@ -86,7 +85,7 @@ export default props => {
                   onPress={() => props.navigation.navigate('RembPass')}
                 />
                 <Text style={loginStyle.signText}>Não tem conta? </Text>
-                <Button
+                <Button 
                   text='Cadastre-se'
                   color='#8E3385'
                   width={125}
@@ -97,7 +96,7 @@ export default props => {
                   padding={0}
                   borderRadius={6}
                   alignSelf='center'
-                  onPress={() => Alert.alert('SignUp')}
+                  onPress={() => props.navigation.navigate('SignUp')}
                 />
               </View>
               <View style={loginStyle.buttonContainer}>
