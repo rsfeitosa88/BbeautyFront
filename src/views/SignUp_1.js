@@ -12,6 +12,9 @@ import {
 import Button from '../components/ButtonFactory'
 import UselessForm from '../components/UselessForm'
 import signUp_1Styles from '../assets/styles/signUp_1Styles'
+import MyAppHeaderTextBold from '../components/MyAppHeaderTextBold'
+import MyAppHeaderTextNormal from '../components/MyAppHeaderTextNormal'
+import MyAppSubHeaderText from '../components/MyAppSubHeaderText'
 
 export default SignUp_1 = props => {
   
@@ -38,33 +41,13 @@ export default SignUp_1 = props => {
             blurRadius={50}
           >
             <View style={signUp_1Styles.headContainer}>
-              <Text 
-                style={[
-                signUp_1Styles.textBold, 
-                signUp_1Styles.firstTextHead
-                ]}
-              >
-                Seja bem-vinde
-              </Text>
-              <Text 
-                style={[
-                  signUp_1Styles.textNormal, 
-                  signUp_1Styles.firstTextHead, 
-                  signUp_1Styles.space
-                ]}
-              >
-                à Bbeauty
-              </Text>
-              <Text 
-                style={[
-                  signUp_1Styles.textNormal, 
-                  signUp_1Styles.scndTextHead
-                ]}
-              >
+              <MyAppHeaderTextBold>Seja bem-vinde</MyAppHeaderTextBold>
+              <MyAppHeaderTextNormal>à Bbeauty</MyAppHeaderTextNormal>
+              <MyAppSubHeaderText>
                 Nós e os profissionais, estamos 
                 ansiosos para mostrarmos os trabalhos. 
                 Mas antes, precisamos de alguns dados.
-              </Text>
+              </MyAppSubHeaderText>
             </View>
             <View style={signUp_1Styles.photoContainer}>
               <Image 
@@ -88,84 +71,86 @@ export default SignUp_1 = props => {
               />
             </View>
             <View style={signUp_1Styles.inputContainer}>
-                <UselessForm
-                  text='Nome'
-                  maxLenght={15}
-                  fontFamily='Poppins-Regular'
-                  fontSize={17}
-                  width={170}
-                  value={nome}
-                  onChange={nome => setNome(nome) }
-                  returnKeyType='next'
-                  onSubmitEditing={() => {this.input_2.focus()}}
-                  blurOnSubmit={false}
-                />
-                <UselessForm
-                  text='Sobrenome'
-                  maxLenght={15}
-                  fontFamily='Poppins-Regular'
-                  fontSize={17}
-                  width={170}
-                  value={sobrenome}
-                  onChange={sobrenome => setSobrenome(sobrenome)}
-                  returnKeyType='next'
-                  blurOnSubmit={false}
-                  onSubmitEditing={() => (this.input_3.focus())}
-                  ref={input => this.input_2 = input}
-                />
-                <UselessForm
-                  text='Endereço'
-                  maxLenght={15}
-                  fontFamily='Poppins-Regular'
-                  fontSize={17}
-                  width={300}
-                  value={endereco}
-                  onChange={endereco => setEndereco(endereco)}
-                  blurOnSubmit={false}
-                  returnKeyType='next'
-                  onSubmitEditing={() => this.input_4.focus()}
-                  ref={input => this.input_3 = input}
-                />
-                <UselessForm
-                  text='Nº'
-                  maxLenght={15}
-                  fontFamily='Poppins-Regular'
-                  fontSize={17}
-                  width={50}
-                  value={numero}
-                  onChange={numero => setNumero(numero)}
-                  blurOnSubmit={false}
-                  returnKeyType='done'
-                  ref={input => this.input_4 = input}
-                />
-                <Button
-                  text='Voltar'
-                  color='#FFFFFF'
-                  width={106}
-                  height={42}
-                  colorText='#8E3385'
-                  fontFamily='Poppins-Bold'
-                  fontSize={19}
-                  padding={6}
-                  borderRadius={30}
-                  alignSelf='center'
-                  marginTop={30}
-                  onPress={() => props.navigation.navigate('Login')}
-                />
-                <Button
-                  text='Próximo Passo'
-                  color='#8E3385'
-                  width={152}
-                  height={42}
-                  colorText='#FFFFFF'
-                  fontFamily='Poppins-Bold'
-                  fontSize={18.5}
-                  padding={6}
-                  borderRadius={30}
-                  alignSelf='center'
-                  marginTop={30}
-                  onPress={() => props.navigation.navigate('SignUp_2')}
-                />
+              <UselessForm
+                text='Nome'
+                maxLenght={15}
+                fontFamily='Poppins-Regular'
+                fontSize={17}
+                width={170}
+                value={nome}
+                onChange={nome => setNome(nome) }
+                returnKeyType='next'
+                onSubmitEditing={() => {this.input_2.focus()}}
+                blurOnSubmit={false}
+              />
+              <UselessForm
+                text='Sobrenome'
+                maxLenght={15}
+                fontFamily='Poppins-Regular'
+                fontSize={17}
+                width={170}
+                value={sobrenome}
+                onChange={sobrenome => setSobrenome(sobrenome)}
+                returnKeyType='next'
+                blurOnSubmit={false}
+                onSubmitEditing={() => (this.input_3.focus())}
+                ref={input => this.input_2 = input}
+              />
+              <UselessForm
+                text='Endereço'
+                maxLenght={15}
+                fontFamily='Poppins-Regular'
+                fontSize={17}
+                width={300}
+                value={endereco}
+                onChange={endereco => setEndereco(endereco)}
+                blurOnSubmit={false}
+                returnKeyType='next'
+                onSubmitEditing={() => this.input_4.focus()}
+                ref={input => this.input_3 = input}
+              />
+              <UselessForm
+                text='Nº'
+                maxLenght={15}
+                fontFamily='Poppins-Regular'
+                fontSize={17}
+                width={50}
+                value={numero}
+                onChange={numero => setNumero(numero)}
+                blurOnSubmit={false}
+                returnKeyType='done'
+                ref={input => this.input_4 = input}
+              />
+            </View>
+            <View style={signUp_1Styles.bottomContainer}>
+              <Button
+                text='Voltar'
+                color='#FFFFFF'
+                width={106}
+                height={42}
+                colorText='#8E3385'
+                fontFamily='Poppins-Bold'
+                fontSize={19}
+                padding={6}
+                borderRadius={10}
+                alignSelf='center'
+                marginTop={30}
+                onPress={() => props.navigation.navigate('Login')}
+              />
+              <Button
+                text='Próximo Passo'
+                color='#8E3385'
+                width={152}
+                height={42}
+                colorText='#FFFFFF'
+                fontFamily='Poppins-Bold'
+                fontSize={18.5}
+                padding={6}
+                borderRadius={10}
+                alignSelf='center'
+                marginTop={30}
+                onPress={() => props.navigation.navigate('SignUp_2')}
+              />
             </View>
           </ImageBackground>
         </TouchableWithoutFeedback>

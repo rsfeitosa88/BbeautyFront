@@ -6,14 +6,17 @@ import {
     KeyboardAvoidingView,
     Keyboard,
     TouchableWithoutFeedback,
-    Platform,
-    StyleSheet
+    Platform
 } from 'react-native'
 
 import ButtonFactory from '../components/ButtonFactory'
 import UselessForm from '../components/UselessForm'
 import signUp_2Styles from '../assets/styles/signUp_2Styles'
 import SignUp_1 from '../views/SignUp_1'
+import MyAppHeaderTextBold from '../components/MyAppHeaderTextBold'
+import MyAppHeaderTextNormal from '../components/MyAppHeaderTextNormal'
+import MyAppSubHeaderText from '../components/MyAppSubHeaderText'
+
 
 export default SignUp_2 = props => {
 
@@ -38,31 +41,14 @@ export default SignUp_2 = props => {
             blurRadius={50}
           >
             <View style={signUp_2Styles.headContainer}>
-              <Text 
-                style={
-                  [signUp_2Styles.textBold, 
-                  signUp_2Styles.firstTextHead]
-                }
-                >Falta Pouco,{'\n'}(nome user).
-              </Text>
-              <Text 
-                style={[
-                  signUp_2Styles.firstTextHead,
-                  signUp_2Styles.textNormal,
-                  signUp_2Styles.space 
-                ]}
-                  >Só alguns dados e pronto!
-              </Text>
-              <Text 
-                style={[
-                  signUp_2Styles.scndTextHead,
-                  signUp_2Styles.textNormal
-                ]}>
+              <MyAppHeaderTextBold>Falta Pouco,{'\n'}(nome user).</MyAppHeaderTextBold>
+              <MyAppHeaderTextNormal>Só alguns dados e pronto!</MyAppHeaderTextNormal>
+              <MyAppSubHeaderText>
                 Após a criação do perfil, 
                 enviaremos um email com link, 
                 para confirmar o seu cadastro e 
                 ter acesso ao App
-              </Text>
+              </MyAppSubHeaderText>
             </View>
             <View style={signUp_2Styles.inputContainer}>
               <UselessForm
@@ -94,6 +80,7 @@ export default SignUp_2 = props => {
                 onSubmitEditing={() => (this.input_3.focus())}
                 ref={input => this.input_2 = input}
               />
+              
               <UselessForm
                 text='Confirme a Senha'
                 maxLenght={15}
@@ -118,10 +105,10 @@ export default SignUp_2 = props => {
               fontFamily='Poppins-Bold'
               fontSize={19}
               padding={6}
-              borderRadius={30}
+              borderRadius={10}
               alignSelf='center'
               marginTop={30}
-              onPress={() => props.navigation.navigate('Login')}
+              onPress={() => props.navigation.navigate('SignUp_1')}
              />
             <ButtonFactory
               text='Próximo Passo'
@@ -132,10 +119,10 @@ export default SignUp_2 = props => {
               fontFamily='Poppins-Bold'
               fontSize={18.5}
               padding={6}
-              borderRadius={30}
+              borderRadius={10}
               alignSelf='center'
               marginTop={30}
-              onPress={() => props.navigation.navigate('SignUp_2')}
+              onPress={() => props.navigation.navigate('Confirm')}
             />
             </View>
           </ImageBackground>

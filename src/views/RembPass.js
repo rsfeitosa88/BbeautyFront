@@ -11,6 +11,9 @@ import {
 import styles from '../assets/styles/rembPassStyle'
 import UselessTextInput from '../components/UselessForm'
 import Button from '../components/ButtonFactory'
+import MyAppHeaderTextBold from '../components/MyAppHeaderTextBold'
+import MyAppHeaderTextNormal from '../components/MyAppHeaderTextNormal'
+import MyAppSubHeaderText from '../components/MyAppSubHeaderText'
 
 export default RembPass = props =>{
     
@@ -31,18 +34,9 @@ export default RembPass = props =>{
             blurRadius={50}
             >
             <View style={styles.containerHead}>
-              <Text 
-                  style={[ 
-                    styles.textBold, 
-                    styles.headFirstText]}>Esqueceu a senha?</Text>
-              <Text 
-                style={[
-                  styles.headTextNormal,
-                  styles.headFirstText]}>Tudo bem!</Text>
-              <Text 
-              style={[
-                  styles.textNormal, 
-                  styles.headSecondText]}>Eviaremos um e-mail com um link para efetuar a troca</Text>
+              <MyAppHeaderTextBold>Esqueceu a senha?</MyAppHeaderTextBold>
+              <MyAppHeaderTextNormal>Tudo bem!</MyAppHeaderTextNormal>
+              <MyAppSubHeaderText>Eviaremos um e-mail com um link para efetuar a troca</MyAppSubHeaderText>
             </View>
             <View style={styles.bodyContainer}>
               <View style={styles.textInputContainer}> 
@@ -53,7 +47,7 @@ export default RembPass = props =>{
                   fontFamily='Poppins-Regular'
                   fontSize={17}
                   inlineImagePadding={50}
-                  style={temp.textField}
+                  style={styles.textField}
                   maxLenght={28}
                   value={email}
                   onChangeText={email => setEmail(email)}
@@ -69,7 +63,7 @@ export default RembPass = props =>{
                   fontFamily='Poppins-Bold'
                   fontSize={18}
                   padding={7}
-                  borderRadius={30}
+                  borderRadius={10}
                   alignSelf='center'
                   onPress={() => null}
                 />
@@ -86,7 +80,7 @@ export default RembPass = props =>{
                 fontFamily='Poppins-Regular'
                 fontSize={24}
                 padding={6}
-                borderRadius={30}
+                borderRadius={10}
                 alignSelf='center'
                 onPress={() => props.navigation.navigate('Login')}
               />
@@ -97,15 +91,3 @@ export default RembPass = props =>{
    </View>
   )
 }
-
-const temp = StyleSheet.create({
-  input: {
-    height: 20,
-    margin: 10,
-    borderWidth: 1
-  },
-  textField: {
-    fontFamily: 'Poppins-Regular',
-    fontSize: 17
-  }
-})

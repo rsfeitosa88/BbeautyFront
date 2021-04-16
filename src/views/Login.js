@@ -11,6 +11,9 @@ import {
 import loginStyle from '../assets/styles/loginStyle'
 import Button from '../components/ButtonFactory'
 import UselessForm from '../components/UselessForm'
+import MyAppHeaderTextBold from '../components/MyAppHeaderTextBold'
+import MyAppHeaderTextNormal from '../components/MyAppHeaderTextNormal'
+
 
 export default Login = props => {
   
@@ -33,8 +36,8 @@ export default Login = props => {
             blurRadius={50}
           >
             <View style={loginStyle.containerHead}>
-              <Text style={loginStyle.headTextBold}>Seja bem-vinde</Text>
-              <Text style={loginStyle.headTextNormal}>de volta!</Text>
+              <MyAppHeaderTextBold>Seja bem-vinde</MyAppHeaderTextBold>
+              <MyAppHeaderTextNormal>de volta!</MyAppHeaderTextNormal>
             </View>
             <View style={loginStyle.bodyContainer}>
               <View style={loginStyle.fieldContainer}>
@@ -96,7 +99,7 @@ export default Login = props => {
                   padding={0}
                   borderRadius={6}
                   alignSelf='center'
-                  onPress={() => props.navigation.navigate('SignUp')}
+                  onPress={() => props.navigation.navigate('SignUp_1')}
                 />
               </View>
               <View style={loginStyle.buttonContainer}>
@@ -109,7 +112,7 @@ export default Login = props => {
                   fontFamily='Poppins-Regular'
                   fontSize={24}
                   padding={6}
-                  borderRadius={30}
+                  borderRadius={10}
                   alignSelf='center'
                   onPress={() => Alert.alert('testing')}
                 />

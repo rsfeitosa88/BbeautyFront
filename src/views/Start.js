@@ -26,11 +26,11 @@ export default props => {
         <Button 
           text='Login'
           color='#8E3385'
-          width={130}
-          height={57}
+          width={120}
+          height={50}
           colorText='#FFFFFF'
           fontFamily='Poppins-Medium'
-          fontSize={25}
+          fontSize={20}
           padding={9}
           borderRadius={30}
           alignSelf='center'
@@ -39,15 +39,15 @@ export default props => {
         <Button
           text='Cadastre-se'
           color='#FFFFFF'
-          width={185}
-          height={57}
+          width={160}
+          height={50}
           colorText='#5A5656'
           fontFamily='Poppins-Medium'
-          fontSize={25}
+          fontSize={20}
           padding={9}
           borderRadius={30}
           alignSelf='center' 
-          onPress={()=> props.navigation.navigate('SignUp')}
+          onPress={()=> props.navigation.navigate('SignUp_1')}
         />
       </View>
     </ImageBackground> 
